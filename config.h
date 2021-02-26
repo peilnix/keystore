@@ -1,0 +1,11 @@
+#ifndef KEYSTORE_CONFIG_H
+#define KEYSTORE_CONFIG_H 1
+
+#define KEYSTORE_VERSION_MAX    0
+#define KEYSTORE_VERSION_MIN    3
+#define KEYSTORE_VERSION_STRING "0.3"
+
+#define KEYSTORE_DBFILE ".keystore.db"
+
+
+#endif
