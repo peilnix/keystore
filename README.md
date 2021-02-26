@@ -2,6 +2,9 @@
 A simple password manager with ncurses interface.
 All data is stored securely in an encrypted sqlite database.
 
+[simple]
+[secure]
+
 usage: 
 keystore --db FILE
 keystore --add USER@HOST --comment COMMENT
