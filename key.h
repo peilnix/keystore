@@ -4,21 +4,22 @@
 #include "util.h"
 
 
-/* Key context can be part of a linked list.
+/* A struct representing a key context.
  */
 typedef struct ks_key
 {
-	const char *user;
-	const char *host;
-	const char *pass;
-	const char *comment;
+	char  *user;
+	char  *host;
+	char  *pass;
+	char  *comment;
 
-	struct ks_key *prev;
-	struct ks_key *next;
+	int    index;		// Index in list
+	struct ks_key *prev;	// Previous key
+	struct ks_key *next;	// Next key
 
 } ks_key;
 
-
+/* Create key context. */
 ks_key *ks_key_new(void);
 ks_key *ks_key_new_init(const char *user,
 			const char *host,
@@ -28,10 +29,10 @@ void ks_key_free(ks_key *);
 
 
 /* Setters */
-int ks_key_set_user(ks_key *, const char *);
-int ks_key_set_host(ks_key *, const char *);
-int ks_key_set_pass(ks_key *, const char *);
-int ks_key_set_comment(ks_key *, const char *);
+void ks_key_set_user(ks_key *, const char *);
+void ks_key_set_host(ks_key *, const char *);
+void ks_key_set_pass(ks_key *, const char *);
+void ks_key_set_comment(ks_key *, const char *);
 
 
 
