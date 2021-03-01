@@ -1,7 +1,6 @@
 # keystore
 
-A simple password manager with ncurses interface.
-All data is stored securely in an encrypted sqlite database.
+A simple password manager using ncurses and sqlitecipher.
 
 ## Usage
        # Start keystore with default database ~/.keystore.db
