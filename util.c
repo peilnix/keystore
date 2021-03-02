@@ -91,3 +91,15 @@ int ks_isreg(const char *path)
 	struct stat st;
 	return (!stat(path, &st) && S_ISREG(st.st_mode));
 }
+
+int ks_strcmp(const char *A, const char *B)
+{
+	if (!A) {
+		return (!B) ? 0 : -1;
+	}
+	else if (!B) {
+		return (!A) ? 0 : +1;
+	}
+	return strcmp(A, B);
+}
+

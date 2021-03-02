@@ -39,6 +39,12 @@ int ks_read_confirmed_pass(const char *prompt1,
 int ks_isreg(const char *path);
 
 
+/* Compares A and B and returns -1, 0, +1 if
+ * A is lower, equal or higher to B.
+ * A and B can be NULL.
+ */
+int ks_strcmp(const char *A, const char *B);
+
 /* Write to stderr */
 #define ks_error(s,...) \
 	fprintf(stderr, (s), ##__VA_ARGS__)
