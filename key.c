@@ -66,3 +66,21 @@ void ks_key_set_comment(ks_key *k, const char *s)
 	}
 }
 
+int ks_key_cmp(const ks_key *A, const ks_key *B,
+                enum ks_key_cmp_mode mode,
+                int ascend)
+{
+	switch (mode) {
+	case CMP_BY_USER:
+		return ks_strcmp2(A->user, B->user, ascend);
+	case CMP_BY_HOST:
+		return ks_strcmp2(A->host, B->host, ascend);
+	case CMP_BY_PASS:
+		return ks_strcmp2(A->pass, B->pass, ascend);
+	case CMP_BY_COMMENT:
+		return ks_strcmp2(A->comment, B->comment, ascend);
+	}
+	return 0;
+}
+
+
