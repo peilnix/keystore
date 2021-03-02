@@ -44,6 +44,7 @@ int ks_isreg(const char *path);
  * A and B can be NULL.
  */
 int ks_strcmp(const char *A, const char *B);
+int ks_strcmp2(const char *A, const char *B, int ascend);
 
 /* Write to stderr */
 #define ks_error(s,...) \

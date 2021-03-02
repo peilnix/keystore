@@ -103,3 +103,8 @@ int ks_strcmp(const char *A, const char *B)
 	return strcmp(A, B);
 }
 
+int ks_strcmp2(const char *A, const char *B, int ascend)
+{
+	int v = (ascend) ? +1 : -1;
+	return ks_strcmp(A, B) * v;
+}
