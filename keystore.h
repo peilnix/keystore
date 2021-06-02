@@ -5,8 +5,16 @@
 #include "key.h"
 #include "db.h"
 
+/*
+ * up/down	Select key
+ * enter	En/Disable showing password
+ * n		Add new key
+ * d		Delete selected key
+ * u		Update selected key
+ *
+ */
 
-/* Start ncurses userinterface.
+/* Start ncurses user interface.
  *
  * @param  dbfile    Path to database. If this is NULL
  *                   we use $HOME/.keystore.db instead.

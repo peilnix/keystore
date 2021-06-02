@@ -3,10 +3,10 @@ CFLAGS = -Wall -Wextra -Werror -std=c99
 CLIBS  = -lsqlcipher -lncurses
 PROG   = keystore
 
-$(PROG): main.c db.o key.o keylist.o keystore.o util.o
+$(PROG): main.c db.o key.o keylist.o keystore.o util.o win.o
 
 	$(CC) $(CFLAGS) $(CLIBS) -o $(PROG)\
-         main.c db.o key.o keylist.o keystore.o util.o
+         main.c db.o key.o keylist.o keystore.o util.o win.o
 
 
 key.o: key.c
@@ -19,6 +19,8 @@ db.o: db.c
 	$(CC) $(CFLAGS) -c db.c
 util.o: util.c
 	$(CC) $(CFLAGS) -c util.c
+win.o: win.c
+	$(CC) $(CFLAGS) -c win.c
 
 
 clean:
