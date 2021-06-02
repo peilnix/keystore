@@ -10,6 +10,7 @@
 
 
 /* Memory helpers */
+
 void *ks_alloc(size_t);
 void  ks_free(void *);
 char *ks_strdup(const char *);
