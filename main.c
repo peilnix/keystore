@@ -3,9 +3,15 @@
 /*
  * Keystore
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	keystore_run_ui(NULL);
+	const char *dbpath = NULL;
+
+	if (argc > 1)
+		dbpath = argv[0];
+
+
+	keystore_run_ui(dbpath);
 	return 0;
 }
 
